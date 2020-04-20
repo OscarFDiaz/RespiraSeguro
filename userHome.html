@@ -1,0 +1,20 @@
+<ons-page id="userHome">
+    <ons-toolbar id="toolbar">
+        <div class="left">
+            <ons-toolbar-button onclick="fn.open()">
+                <i class="icon ion-md-menu" style="color: black !important"></i>
+            </ons-toolbar-button>
+        </div>
+        <div class="center labelMenuPage" id="titleSplitterUser">
+            INICIO
+        </div>
+    </ons-toolbar>
+
+    <script>
+        document.addEventListener('init', function (event) {
+                if (event.target.matches('#userHome')) {
+                        document.getElementById("titleSplitterUser").innerHTML = "INICIO"; 
+                }
+        }, false);
+</script>
+</ons-page>

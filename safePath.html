@@ -1,0 +1,25 @@
+<ons-page id="safePath">
+    <ons-toolbar id="toolbar">
+        <div class="left">
+            <ons-toolbar-button onclick="fn.open()">
+                <i class="icon ion-md-menu" style="color: black !important"></i>
+            </ons-toolbar-button>
+        </div>
+        <div class="center labelMenuPage" id="titleSafePath">
+            CAMINO MÁS SALUDABLE
+        </div>
+    </ons-toolbar>
+
+    <div id="map"></div>
+
+    <script>
+        var map = "smap";
+        initMap(map);
+        
+        document.addEventListener('init', function (event) {
+            if (event.target.matches('#safePath')) {
+                    document.getElementById("titleSafePath").innerHTML = "CAMINO MÁS SALUDABLE"; 
+            }
+        }, false);
+</script>
+</ons-page>

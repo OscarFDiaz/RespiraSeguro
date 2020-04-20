@@ -1,0 +1,54 @@
+<ons-page id="splitterUser">
+    <ons-splitter>
+        <ons-splitter-side id="menu" side="left" width="97%" collapse swipeable>
+            <ons-page>
+
+                <ons-list id="userSplitterList">
+                    <ons-card class="cardUserMenu">
+                        <img class="imageUserMenu" src="https://i.imgur.com/uJXZJ4C.png" id="userPerfilImageMenu">
+                        <label class="labelUserName" id="userLabelMenu">Aurélien Salomon</label>
+                    </ons-card>
+                    <ons-list-item onclick="fn.load('userHome.html')" tappable style="border-radius: 25px !important">
+                        <i class="icon ion-md-home" 
+                            style="color: #454F63 !important; font-size: 32px !important;"></i>
+                        INICIO
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.load('safePath.html')" tappable
+                        style="border-radius: 25px !important">
+                        <i class="icon ion-md-navigate"
+                            style="color: #454F63 !important; font-size: 32px !important;"></i>
+                        CAMINO MÁS SALUDABLE
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.load('communityMap.html')" tappable style="border-radius: 25px !important">
+                        <i class="icon ion-md-map"
+                            style="color: #454F63 !important; font-size: 32px !important;"></i>
+                        MAPA DE LA COMUNIDAD
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.load('tips.html')" tappable style="border-radius: 25px !important">
+                        <i class='icon ion-ios-list' style="color: #454F63 !important; font-size: 32px !important;"></i>
+                        CONSEJOS SOBRE CONTAMINACIÓN
+                    </ons-list-item>
+                    <ons-list-item id="closeSesionItem" onclick="closeSesionUser()" tappable>
+                        <i class="icon ion-md-exit" 
+                            style="color: #FF4F4F !important; font-size: 32px !important;"></i>
+                        CERRAR SESIÓN
+                    </ons-list-item>
+                </ons-list>
+            </ons-page>
+        </ons-splitter-side>
+        <ons-splitter-content id="content" page="userHome.html"></ons-splitter-content>
+    </ons-splitter>
+    <script>
+        document.addEventListener('init', function (event) {
+            if (event.target.matches('#splitterUser')) {
+                if(localStorage.getItem('userData') != null){
+                    var userData = localStorage.getItem('userData');
+                    var userDataS = userData.split("|");
+                    
+                    document.getElementById("userPerfilImageMenu").src = userDataS[0];
+                    document.getElementById("userLabelMenu").innerHTML = userDataS[1] + " " + userDataS[2]; //Imagen del splitter
+                }
+            }
+        }, false);
+    </script>
+</ons-page>

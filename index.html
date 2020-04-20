@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+        <!--IMPORT DE LOS ESTILOS DE ONSEN UI-->
+        <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+        <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+        <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
+        <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+        <!--IMPORT DE LOS .JS, DEBEN ESTAR AQUI PARA PODER SER UTILIZADOS EN TODOS LADOS-->
+        <script src="scripts/login.js"></script>
+        <script src="scripts/splitter.js"></script>
+        <script src="scripts/closeSesion.js"></script>
+        <script src="scripts/safePath.js"></script>
+        <script src="scripts/communityMap.js"></script>
+
+        <!--IMPORT DE LA HOJA DE ESTILOS LOCAL-->
+        <link rel="stylesheet" href="style.css">
+    
+        <title>Respira Seguro</title>
+    </head> 
+    <body>    
+        <ons-navigator id="navigator" page="index.html"></ons-navigator>
+            <ons-template id="index.html">
+
+                <ons-page id="indexPage">
+                    <img class="imageLogo" src="https://i.imgur.com/9X43J0A.png">
+                 
+                    <ons-button class="loginButton" onclick="login()">INGRESAR</ons-button>
+                    <ons-button class="registerButton" onclick="">REGISTRARME</ons-button>
+
+                    <ons-modal direction="up">
+                        <div style="text-align: center">
+                          <p>
+                            <ons-icon icon="md-spinner" size="28px" spin></ons-icon> Cargando, por favor espere...
+                          </p>
+                        </div>
+                    </ons-modal>
+
+                </ons-page>
+
+            </ons-template>
+            <!--AIzaSyB4zJuOIeUmn1if6B25Fn3rxe3az3QPLY0 - PREMIUM-->
+            <!--AIzaSyC6z6UxsUI81lx7uYkXQ0Bt00MHNA0xG0Q-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6z6UxsUI81lx7uYkXQ0Bt00MHNA0xG0Q&callback=initMap" async defer></script>
+        
+        <script type="text/javascript" src="cordova.js" ></script>
+    </body>
+</html>

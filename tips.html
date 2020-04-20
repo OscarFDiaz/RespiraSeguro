@@ -1,0 +1,42 @@
+<ons-page id="tips">
+  <ons-toolbar id="toolbar">
+    <div class="left">
+      <ons-toolbar-button onclick="fn.open()">
+        <i class="icon ion-md-menu" style="color: black !important;"></i>
+      </ons-toolbar-button>
+    </div>
+    <div class="center labelMenuPage" id="titleTips">
+      CONSEJOS SOBRE CONTAMINACIÓN
+    </div>
+  </ons-toolbar>
+
+  <ons-card>
+    - Mantenga los botes de basura y de reciclaje bien tapados para evitar que
+    la basura se vuele lejos o dispersada por forrajeando animales.
+  </ons-card>
+  <ons-card>
+    - Limpie las hojas y basura de tus lluvia y cunetas de la calle.
+  </ons-card>
+  <ons-card>
+    - Cuando se utiliza una empresa de limpieza (por ejemplo. limpiadores de
+    alfombras, limpiadores de ventanas, hidrolavadoras), asegurarse de que
+    disponen de aguas residuales en un fregadero de servicio, inodoro, limpieza
+    de alcantarillado sanitario, o en un área con vegetación.
+  </ons-card>
+  <ons-card>
+    - Deshágase de los desechos de mascotas en la basura.
+  </ons-card>
+
+  <script>
+    document.addEventListener(
+      "init",
+      function (event) {
+        if (event.target.matches("#tips")) {
+          document.getElementById("titleTips").innerHTML =
+            "CONSEJOS SOBRE CONTAMINACIÓN";
+        }
+      },
+      false
+    );
+  </script>
+</ons-page>

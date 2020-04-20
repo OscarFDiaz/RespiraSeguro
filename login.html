@@ -1,0 +1,15 @@
+<ons-page id="safePath">
+    <ons-toolbar id="toolbar" class="changeToolbar">
+        <ons-button class="changeButton" onclick="">REGISTRARME</ons-button>
+    </ons-toolbar>
+
+        <ons-input id="name" modifier="underbar" type="text" placeholder="Nombre" float class="loginInput"></ons-input>
+        <ons-input id="password" modifier="underbar" type="password" placeholder="Contraseña" float class="loginInput"></ons-input>
+
+        <ons-button class="loginButton" onclick="checkUser(document.getElementById('name').value, document.getElementById('password').value)">INGRESAR</ons-button>
+    <script>
+        document.addEventListener('init', function (event) {
+
+        }, false);
+    </script>
+</ons-page>

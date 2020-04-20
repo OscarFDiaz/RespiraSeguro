@@ -1,0 +1,27 @@
+<ons-page id="communityMap">
+    <ons-toolbar id="toolbar">
+        <div class="left">
+            <ons-toolbar-button onclick="fn.open()">
+                <i class="icon ion-md-menu" style="color: black !important"></i>
+            </ons-toolbar-button>
+        </div>
+        <div class="center labelMenuPage" id="titleCommunityMap">
+            MAPA DE LA COMUNIDAD
+        </div>
+    </ons-toolbar>
+
+    <div id="map2"></div>
+
+    <script>
+        getMarkers();
+        
+        /*var map = "cmap";
+        initMap(map);*/
+
+        document.addEventListener('init', function (event) {
+            if (event.target.matches('#communityMap')) {
+                document.getElementById("titleCommunityMap").innerHTML = "MAPA DE LA COMUNIDAD";
+            }
+        }, false);
+</script>
+</ons-page>
